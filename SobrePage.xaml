@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="MauiHotel.SobrePage"
+    BackgroundColor="#F1F5F9"
+    Title="Sobre">
+
+    <ScrollView>
+
+        <VerticalStackLayout
+            Padding="25"
+            Spacing="25">
+
+            <Frame
+                BackgroundColor="#1E3A8A"
+                CornerRadius="20"
+                Padding="25"
+                HasShadow="True">
+
+                <VerticalStackLayout
+                    Spacing="10">
+
+                    <Label
+                        Text="APP HOTEL"
+                        FontSize="34"
+                        FontAttributes="Bold"
+                        TextColor="White"
+                        HorizontalOptions="Center" />
+
+                    <Label
+                        Text="Projeto Acadêmico em .NET MAUI"
+                        FontSize="18"
+                        TextColor="White"
+                        HorizontalTextAlignment="Center" />
+
+                </VerticalStackLayout>
+
+            </Frame>
+
+            <Frame
+                BackgroundColor="White"
+                CornerRadius="20"
+                Padding="25"
+                HasShadow="True">
+
+                <VerticalStackLayout
+                    Spacing="18">
+
+                    <Label
+                        Text="Informações do Projeto"
+                        FontSize="28"
+                        FontAttributes="Bold"
+                        TextColor="#1E293B"
+                        HorizontalOptions="Center" />
+
+                    <BoxView
+                        HeightRequest="2"
+                        BackgroundColor="#CBD5E1" />
+
+                    <Label
+                        Text="👨‍💻 Desenvolvedor:"
+                        FontSize="20"
+                        FontAttributes="Bold"
+                        TextColor="#1E293B" />
+
+                    <Label
+                        Text="Marcelo Di Lorenzi Andreonii"
+                        FontSize="18"
+                        TextColor="#475569" />
+
+                    <Label
+                        Text="📅 Ano de Desenvolvimento:"
+                        FontSize="20"
+                        FontAttributes="Bold"
+                        TextColor="#1E293B" />
+
+                    <Label
+                        Text="2026"
+                        FontSize="18"
+                        TextColor="#475569" />
+
+                    <Label
+                        Text="🛠 Tecnologia Utilizada:"
+                        FontSize="20"
+                        FontAttributes="Bold"
+                        TextColor="#1E293B" />
+
+                    <Label
+                        Text=".NET MAUI"
+                        FontSize="18"
+                        TextColor="#475569" />
+
+                </VerticalStackLayout>
+
+            </Frame>
+
+        </VerticalStackLayout>
+
+    </ScrollView>
+
+</ContentPage>
