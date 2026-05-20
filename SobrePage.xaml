@@ -14,7 +14,7 @@
             Spacing="25">
 
             <Frame
-                BackgroundColor="#1E3A8A"
+                BackgroundColor="#8B6B61"
                 CornerRadius="20"
                 Padding="25"
                 HasShadow="True">

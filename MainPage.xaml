@@ -4,81 +4,128 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     x:Class="MauiHotel.MainPage"
-    BackgroundColor="#F1F5F9"
-    Title="Home">
+    BackgroundColor="#F8F1E7"
+    Title="Reserva">
 
     <ScrollView>
+        <VerticalStackLayout Padding="25" Spacing="20">
 
-        <VerticalStackLayout
-            Padding="25"
-            Spacing="25">
+            <Frame BackgroundColor="#8B6B61" CornerRadius="20" Padding="25">
+                <VerticalStackLayout Spacing="10">
+                    <Label Text="APP HOTEL"
+                           FontSize="34"
+                           FontAttributes="Bold"
+                           TextColor="White"
+                           HorizontalOptions="Center" />
 
-            <Frame
-                BackgroundColor="#1E3A8A"
-                CornerRadius="20"
-                Padding="25"
-                HasShadow="True">
-
-                <VerticalStackLayout
-                    Spacing="15">
-
-                    <Label
-                        Text="APP HOTEL"
-                        FontSize="36"
-                        FontAttributes="Bold"
-                        TextColor="White"
-                        HorizontalOptions="Center" />
-
-                    <Label
-                        Text="Sistema moderno de hospedagem desenvolvido em .NET MAUI"
-                        FontSize="18"
-                        TextColor="White"
-                        HorizontalTextAlignment="Center" />
-
+                    <Label Text="Sistema de hospedagem e reservas"
+                           FontSize="18"
+                           TextColor="#FFF8EF"
+                           HorizontalTextAlignment="Center" />
                 </VerticalStackLayout>
-
             </Frame>
 
-            <Image
-                Source="dotnet_bot.png"
-                HeightRequest="220"
-                HorizontalOptions="Center" />
+            <Frame BackgroundColor="#FFF8EF" CornerRadius="20" Padding="20">
+                <VerticalStackLayout Spacing="15">
 
-            <Frame
-                BackgroundColor="White"
-                CornerRadius="20"
-                Padding="20"
-                HasShadow="True">
+                    <Label Text="Nova Reserva"
+                           FontSize="26"
+                           FontAttributes="Bold"
+                           TextColor="#6B4F4F" />
 
-                <VerticalStackLayout
-                    Spacing="12">
+                    <Entry x:Name="txtNome"
+                           Placeholder="Nome do hóspede"
+                           BackgroundColor="White"
+                           TextColor="#3F2E2E" />
 
-                    <Label
-                        Text="Bem-vindo"
-                        FontSize="28"
-                        FontAttributes="Bold"
-                        TextColor="#1E293B" />
+                    <Label Text="Tipo de quarto:"
+                           FontAttributes="Bold"
+                           TextColor="#6B4F4F" />
 
-                    <Label
-                        Text="Aplicativo criado para gerenciamento moderno de hospedagem e reservas."
-                        FontSize="18"
-                        TextColor="#475569" />
+                    <Picker x:Name="pickerQuarto"
+                            Title="Selecione o quarto"
+                            BackgroundColor="White"
+                            TextColor="#3F2E2E">
+                        <Picker.Items>
+                            <x:String>Simples - R$ 180,00</x:String>
+                            <x:String>Casal - R$ 250,00</x:String>
+                            <x:String>Luxo - R$ 380,00</x:String>
+                        </Picker.Items>
+                    </Picker>
+
+                    <Label Text="Data de entrada:"
+                           FontAttributes="Bold"
+                           TextColor="#6B4F4F" />
+
+                    <DatePicker x:Name="dataEntrada"
+                                BackgroundColor="White"
+                                TextColor="#3F2E2E" />
+
+                    <Label Text="Data de saída:"
+                           FontAttributes="Bold"
+                           TextColor="#6B4F4F" />
+
+                    <DatePicker x:Name="dataSaida"
+                                BackgroundColor="White"
+                                TextColor="#3F2E2E" />
+
+                    <Label Text="Adultos:"
+                           FontAttributes="Bold"
+                           TextColor="#6B4F4F" />
+
+                    <Stepper x:Name="stepAdultos"
+                             Minimum="1"
+                             Maximum="6"
+                             Increment="1"
+                             Value="1"
+                             ValueChanged="AlterarAdultos" />
+
+                    <Label x:Name="lblAdultos"
+                           Text="Adultos: 1"
+                           FontSize="16"
+                           TextColor="#7C5E57" />
+
+                    <Label Text="Crianças:"
+                           FontAttributes="Bold"
+                           TextColor="#6B4F4F" />
+
+                    <Stepper x:Name="stepCriancas"
+                             Minimum="0"
+                             Maximum="6"
+                             Increment="1"
+                             Value="0"
+                             ValueChanged="AlterarCriancas" />
+
+                    <Label x:Name="lblCriancas"
+                           Text="Crianças: 0"
+                           FontSize="16"
+                           TextColor="#7C5E57" />
+
+                    <Button Text="Calcular Reserva"
+                            Clicked="CalcularReserva"
+                            BackgroundColor="#C89F9C"
+                            TextColor="White"
+                            FontSize="18"
+                            CornerRadius="15"
+                            HeightRequest="55" />
+
+                    <Label x:Name="lblResultado"
+                           FontSize="18"
+                           FontAttributes="Bold"
+                           TextColor="#7C5E57" />
 
                 </VerticalStackLayout>
-
             </Frame>
 
-            <Button
-                Text="Abrir Tela Sobre"
-                Clicked="AbrirSobre"
-                BackgroundColor="#2563EB"
-                TextColor="White"
-                FontSize="20"
-                CornerRadius="15"
-                HeightRequest="60" />
+            <Button Text="Abrir Tela Sobre"
+                    Clicked="AbrirSobre"
+                    BackgroundColor="#8B6B61"
+                    TextColor="White"
+                    FontSize="18"
+                    CornerRadius="15"
+                    HeightRequest="55" />
 
         </VerticalStackLayout>
-
     </ScrollView>
 
 </ContentPage>
