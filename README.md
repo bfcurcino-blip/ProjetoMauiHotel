@@ -34,4 +34,4 @@ Bianca da Silva Fernandes Curcino
 
 ## 📚 Projeto Acadêmico
 
-Atividade desenvolvida para a Agenda 14 da disciplina de Programação Mobile.
+Atividade desenvolvida para a Agenda 13 e 14 da disciplina de Programação Mobile.
